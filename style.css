@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url("bg.jpeg");
+    background-repeat: no-repeat;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h5 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.sections {
+    display: flex;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question {
+    margin: 5px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 300px;
+    height: 550px;
+}
+
+.widgets {
+    margin: 5px;
+    width: 300px;
+    height: 550px;
+    position: relative;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+#weather-container {
+    text-align: center;
+    margin: 5px;
+    width: 300px;
+    height: 550px;
+    padding: 10px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+#weather-container input{
+    width: 200px;
+}
+
+#weather-container button {
+    font-size: 15px;
+    padding: 3px;
+}
+
+#weather-container p {
+    font-size: 20px;
+}
+
+#pomodoro_timer {
+    font-size: 2em;
+}
+
+.diabetes_timer {
+    font-size: 2em;
+    text-align: center;
+}
+
+.inputs {
+    display: inline-block;
+    clear: right;
+    text-align: left;
+}
+
+.inputs button{
+    margin-left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+}
+
+main {
+    color: black;
+    display: grid;
+    place-items: center;
+}
+
+#diabetes_class {
+    width: 1000px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    display: none;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#colesterol_class {
+    width: 1000px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    display: none;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#postura_class {
+    width: 1000px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    display: none;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#depressao_class {
+    width: 1000px;
+    background-color: #ffffff83;
+    box-shadow: 1px 10px 10px black;
+    display: none;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+footer {
+    margin: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+}
+
+
+button{
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
