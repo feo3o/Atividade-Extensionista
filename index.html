@@ -8,126 +8,55 @@
 </head>
 <body>
     <header>
-        <h1>Saúde e Bem-Estar</h1>
+        <h1>Saúde e Bem-Estar - Diabetes</h1>
         <h5>ODS-3</h5>
     </header>
 
-    <div class="sections">
-        <section>
-            <div class="question">
-                <h3>Você possui alguma dessas doenças?</h3>
-                <div class="inputs">
-                    <input type="checkbox" id="diabetes">
-                    <label for="diabetes">Diabetes</label><br>
-                    <input type="checkbox" id="colesterol">
-                    <label for="colesterol">Colesterol Alto</label><br>
-                    <input type="checkbox" id="postura">
-                    <label for="postura">Problemas na Coluna</label><br>
-                    <input type="checkbox" id="depressao">
-                    <label for="depressao">Depressão ou Ansiedade</label><br>
-                    <button type="submit" id="reload">Desfazer</button>
-                </div>
-            </div>
-        </section>
-    
-        <section>
-            <div class="widgets">
-                <div class="pomodoro">
-                    <h2>Pomodoro ⏱</h2>
-                    <p>A Técnica Pomodoro é um método de gerenciamento de tempo para aumentar sua produtividade.</p>
-                    <p id="pomodoro_timer">25:00</p>
-                    <button id="start">Iniciar</button>
-                    <button id="pause">Pausar</button>
-                    <button id="restart">Reiniciar</button>
-                    <p>Lembre-se de beber água e se alongar.</p>
-                    <p>2 litros de água por dia em média é o ideal para um adulto. Pausas para se alongar são essenciais para manter o foco e preservar a saúde do corpo.</p>
-                </div>
-            </div>
-        </section>
-    
+    <main>
+        <div id="diabetes_class">
+            <p>Os pacientes que apresentam diabetes do <span style="font-style:italic;">Tipo 1</span> precisam de injeções diárias de insulina para manterem a glicose no sangue em valores considerados normais.
+                Para essa medição, é aconselhável ter em casa um aparelho, chamado glicosímetro, que será capaz de medir a concentração exata de glicose no sangue durante o dia-a-dia do paciente.                   
+                Os médicos recomendam que a insulina deva ser aplicada diretamente na camada de células de gordura, logo abaixo da pele. Os melhores locais para a aplicação de insulina são barriga, coxa, braço, região da cintura e glúteo.                  
+                Além de prescrever injeções de insulina para baixar o açúcar no sangue, alguns médicos solicitam que o paciente inclua, também, medicamentos via oral em seu tratamento, de acordo com a necessidade de cada caso.</p>
+            <p>Já para os pacientes que apresentam diabetes <span style="font-style:italic;">Tipo 2</span>, o tratamento consiste em identificar o grau de necessidade de cada pessoa e indicar, conforme cada caso, os seguintes medicamentos/técnicas:</p>
+            <ul>
+                <li>Inibidores da alfaglicosidase: impedem a digestão e absorção de carboidratos no intestino;</li>
+                <li>Sulfonilureias: estimulam a produção pancreática de insulina pelas células;</li>
+                <li>Glinidas: agem também estimulando a produção de insulina pelo pâncreas.</li>    
+            </ul>    
+            <p>    
+            O Diabetes Tipo 2 normalmente vem acompanhado de outros problemas de saúde, como obesidade, sobrepeso, sedentarismo, triglicerídios elevados e hipertensão.                
+            Por isso, é essencial manter acompanhamento médico para tratar, também, dessas outras doenças, que podem aparecer junto com o diabetes. </p>
+            <hr>    
+            <p>É necessários manter uma alimentação balanceada e regular. Que tal habilitar o timer para se lembrar de comer de 3 em 3 horas?</p>
+            <div class="timer">
+                <h3>Lembre-se de Comer Bem 🍉</h3>
+                <p id="relogio">3:00:00</p>
+                <button id="start">Iniciar</button>
+                <button id="pause">Pausar</button>
+             </div>
+             <hr>
+        </div>
         <section>
             <div id="weather-container">
                 <h2>Clima 🌤</h2>
-                <input type="text" id="city" placeholder="Digite uma cidade">
-                <button onclick="getWeather()">Search</button>     
+                <input type="text" id="city" placeholder="Digite uma cidade"><br>
+                <button onclick="getWeather()">Procurar</button>     
                 <div id="temp-div"></div>
         
                 <div id="weather-info"></div>
         
                 <div id="hourly-forecast"></div>
-
+    
                 <p id="aviso"></p>
+    
+                <h2>Você Sabia?</h2>
+                <p>O clima e as alterações climáticas podem ter um impacto significativo na saúde de pessoas com diabetes, especialmente em períodos de calor extremo ou frio. O calor pode levar à desidratação, que aumenta os níveis de açúcar no sangue, e a exaustão pelo calor, que pode dificultar o controle do diabetes. O frio, por outro lado, pode levar a uma diminuição da circulação sanguínea, afetando a absorção de insulina e o controle glicêmico.</p>
             </div>
         </section>
-    </div>
-    
-
-    <main>
-        <div class="hidden_classes">
-            <div id="diabetes_class">
-                <p>Os pacientes que apresentam diabetes do <span style="font-style:italic;">Tipo 1</span> precisam de injeções diárias de insulina para manterem a glicose no sangue em valores considerados normais.
-                    Para essa medição, é aconselhável ter em casa um aparelho, chamado glicosímetro, que será capaz de medir a concentração exata de glicose no sangue durante o dia-a-dia do paciente.                   
-                    Os médicos recomendam que a insulina deva ser aplicada diretamente na camada de células de gordura, logo abaixo da pele. Os melhores locais para a aplicação de insulina são barriga, coxa, braço, região da cintura e glúteo.                  
-                    Além de prescrever injeções de insulina para baixar o açúcar no sangue, alguns médicos solicitam que o paciente inclua, também, medicamentos via oral em seu tratamento, de acordo com a necessidade de cada caso.</p>
-                <p>Já para os pacientes que apresentam diabetes <span style="font-style:italic;">Tipo 2</span>, o tratamento consiste em identificar o grau de necessidade de cada pessoa e indicar, conforme cada caso, os seguintes medicamentos/técnicas:</p>
-                <ul>
-                    <li>Inibidores da alfaglicosidase: impedem a digestão e absorção de carboidratos no intestino;</li>
-                    <li>Sulfonilureias: estimulam a produção pancreática de insulina pelas células;</li>
-                    <li>Glinidas: agem também estimulando a produção de insulina pelo pâncreas.</li>    
-                </ul>    
-                <p>    
-                    O Diabetes Tipo 2 normalmente vem acompanhado de outros problemas de saúde, como obesidade, sobrepeso, sedentarismo, triglicerídios elevados e hipertensão.                
-                    Por isso, é essencial manter acompanhamento médico para tratar, também, dessas outras doenças, que podem aparecer junto com o diabetes. </p>
-
-                    <p>É necessários manter uma alimentação balanceada e regular. Que tal habilitar o timer para se lembrar de comer de 3 em 3 horas?</p>
-                    <div class="diabetes_timer">
-                        <h3>Lembre-se de Comer Bem 🍉</h3>
-                        <p id="diabetes_timer">3:00:00</p>
-                        <button id="diabetes_start">Iniciar</button>
-                        <button id="diabetes_pause">Pausar</button>
-                    </div>
-            </div>
-    
-            <div id="colesterol_class">
-                <p>Os pacientes com colesterol alto precisam adotar 3 medidas práticas:</p>
-                <ul>
-                    <li>Alimentação Balanceada</li>
-                    <ul>
-                        <li>É preferível evitar os alimentos de consumo animal, visto que possuem uma maior quantidade de colesterol.</li>
-                        <li>Dê preferêcia para alimentos de origem vegetal, como: frutas, verduras e legumes.</li>
-                        <li>Evite o consumo exagerado de bebidas alcoólicas.</li>
-                    </ul>
-
-                    <li>Prática Regular de Exercícios Físicos</li>
-                    <ul>
-                        <li>Ajuda a reduzir tensões.</li>
-                        <li>Ajuda a controlar o peso.</li>
-                        <li>Reduz significamente o risco de infarto e complicações.</li>
-                    </ul>
-
-                    <li>Medicamentos com receita médica</li>
-                </ul>
-            </div>
-    
-            <div id="postura_class">
-                <p>É importante consultar o ortopedista, na presença de de um problema de coluna, principalmente se a dor for acompanhada de outros sintomas, como ardência ou queimação nas pernas ou braços, para identificar a causa e iniciar o tratamento mais adequado, que pode incluir o uso de remédios analgésicos e anti-inflamatórios, a fisioterapia e a cirurgia.</p>
-                <p>Contudo, podemos sempre nos lembrar do básico, que é manter uma consciência de sempre que possível ajeitar nossa postura e dar pausas durante o trabalho sentado ou em pé<div class=""></div></p>
-            </div>
-    
-            <div id="depressao_class">
-                <p>Depressão e ansiedade são transtornos mentais diferentes, mas que podem coexistir. Ambos podem interferir na qualidade de vida e no prazer de realizar atividades.</p>
-                <p>Dicas para combater a depressão e a ansiedade:</p>
-                <ul>
-                    <li>Ter uma rotina de sono regular</li>
-                    <li>Praticar atividade física regularmente</li>
-                    <li>Manter uma dieta equilibrada</li>
-                    <li>Meditar</li>
-                </ul>
-                
-                <p>É de extrema importância buscar ajuda de um profissional adequado, visto que são doenças sérias e que muitas vezes passam despercebidas ou mal entendidas pelas pessoas.</p>
-            </div>
-        </div>
     </main>
+
+    
 
     <footer>
         Este projeto foi feito por Felipe Dos Santos Pereira RU 3889761<br>
